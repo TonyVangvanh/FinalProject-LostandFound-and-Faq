@@ -1,0 +1,28 @@
+<ion-view view-title="FAQ">
+    <ion-content>
+            <div>
+                <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" placeholder="search" ng-model="searchQuery" />
+                </label>
+            </div>
+
+            <div class="card item-text-wrap">
+                <ion-list>
+                <ion-item ng-repeat="FAQ in items | filter:searchQuery">
+                <h2><b> {{FAQ.FAQquestions}} </b></h2>
+                <ion-item class="item-text-wrap">
+                <h3>{{FAQ.FAQanswer}}</h3>
+                </ion-item>
+                </ion-list>
+            </div>
+
+            <div>
+                <button class="button icon-left ion-home"> Home</button>
+                <button class="button icon-left ion-social-twitter">Twitter</button>
+                <button class="button icon-left ion-social-facebook"> Facebook</button>
+                <button class="button icon-left ion-social-snapchat-outline"> Snapchat</button>
+                <button class="button icon-left ion-gear-a"> Setting</button>
+            </div>
+    </ion-content>
+</ion-view>
